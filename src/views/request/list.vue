@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { fetchList } from '@/api/rnr'
+import { list as rnrList } from '@/api/rnr'
 import waves from '@/directive/waves.js'// 水波纹指令
 import { parseTime } from '@/utils'
 
@@ -89,7 +89,7 @@ export default {
   methods: {
     getList() {
       this.listLoading = true
-      fetchList(this.listQuery).then(response => {
+      rnrList(this.listQuery).then(response => {
         this.list = response.data.items
         this.total = response.data.total
         this.listLoading = false

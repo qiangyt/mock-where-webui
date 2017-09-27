@@ -1,6 +1,6 @@
 import fetch from '@/utils/fetch'
 
-export function fetchList(query) {
+export function list(query) {
     return fetch({
         url: '/rnr/list',
         method: 'get',
