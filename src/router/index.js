@@ -16,7 +16,7 @@ import Layout from '../views/layout/Layout'
  * meta : { role: ['admin'] }  will control the page role
  **/
 export const constantRouterMap = [
-    { path: '/', component: _import('example/table/table'), name: '首页' }
+    { path: '/', component: _import('request/list'), name: '首页' }
 ]
 
 export default new Router({
