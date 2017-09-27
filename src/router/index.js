@@ -5,9 +5,6 @@ const _import = require('./_import_' + process.env.NODE_ENV)
 
 Vue.use(Router)
 
-/* layout */
-import Layout from '../views/layout/Layout'
-
 /**
  * icon : the icon show in the sidebar
  * hidden : if `hidden:true` will not show in the sidebar
