@@ -3,45 +3,57 @@
 
     <el-table :key='tableKey' :data="list" v-loading="listLoading" element-loading-text="给我一点时间" border fit highlight-current-row style="width: 100%">
 
-      <el-table-column align="center" label="#" width="65">
+      <el-table-column align="center" label="#" width="80">
         <template scope="scope">
-          <span>{{scope.row.id}}</span>
+          <span>{{scope.row._id}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="180px" align="center" label="时间">
+      <el-table-column width="100px" align="center" label="AT">
         <template scope="scope">
-          <span>{{scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}')}}</span>
+          <span>{{scope.row.created_at | parseTime('{y}-{m}-{d} {h}:{i}')}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column min-width="300px" label="Request">
+      <el-table-column width="160px" align="center" label="URL">
         <template scope="scope">
-          <span>{{scope.row.title}}</span>
+          <span>{{scope.row.protocol}}://{{scope.row.host}}:{{scope.row.port}}{{scope.row.path}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="110px" align="center" label="Response">
+      <el-table-column width="60px" align="center" label="M">
         <template scope="scope">
-          <span>{{scope.row.author}}</span>
+          <span>{{scope.row.method}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="110px" align="center" label="Path">
+      <el-table-column width="110px" align="center" label="QUERY">
         <template scope="scope">
-          <span>{{scope.row.auditor}}</span>
+          <span>{{scope.row.query}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="110px" align="center" label="Port">
+      <el-table-column width="110px" align="center" label="HEADER">
         <template scope="scope">
-          <span>{{scope.row.auditor}}</span>
+          <span>{{scope.row.header}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="110px" align="center" label="Host">
+      <el-table-column min-width="60px" label="S">
         <template scope="scope">
-          <span>{{scope.row.auditor}}</span>
+          <span>{{scope.row.status}}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column min-width="200px" label="REQ">
+        <template scope="scope">
+          <span>{{scope.row.request_body}}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column min-width="200px" align="center" label="RESP">
+        <template scope="scope">
+          <span>{{scope.row.response_body}}</span>
         </template>
       </el-table-column>
 
