@@ -40,7 +40,7 @@
     "devDependencies": {
         "autoprefixer": "7.1.1",
         "babel-core": "6.25.0",
-        "babel-eslint": "7.2.3",
+        "babel-eslint": "10.0.3",
         "babel-loader": "7.0.0",
         "babel-plugin-transform-runtime": "6.23.0",
         "babel-preset-env": "1.5.2",
@@ -51,7 +51,7 @@
         "copy-webpack-plugin": "4.0.1",
         "cross-env": "5.0.1",
         "css-loader": "0.28.4",
-        "eslint": "3.19.0",
+        "eslint": "6.7.2",
         "eslint-friendly-formatter": "3.0.0",
         "eslint-import-resolver-webpack": "0.8.1",
         "eslint-loader": "1.7.1",
